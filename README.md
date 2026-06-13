@@ -31,6 +31,7 @@ Producing multiple hillshade outputs by illuminating the surface from different 
           <img <img width="945" height="760" alt="image" src="https://github.com/user-attachments/assets/9380d4df-cd0b-40b8-9e32-2bd9e20fdb45" />
           <figcaption> Figure 3: Multidirectional hillshade of Kamnik, generated using <code>multidirectional_hillshade.py</code></figcaption>
 </figure>
+<br><br>
 
 
 
