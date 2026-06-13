@@ -36,6 +36,10 @@ Producing multiple hillshade outputs by illuminating the surface from different 
 
 
 The basic hillshade and multidirectional hillshade share the same underlying formula. You can adjust the slope calculation and the sin/cos terms in the shading formula to experiment with different visualization effects!
+<br><br>
+<br><br>
+<br><br>
+<br><br>
 
 
 
