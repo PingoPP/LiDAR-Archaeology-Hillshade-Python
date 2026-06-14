@@ -27,19 +27,19 @@ def hillshade(dtm, azimuth=350, angle_altitude=45, cellsize=0.5):
   
 #here you can combine by sin [sine] and cos [cosine]...Pure math!
     shaded = (       
-        np.sin(altitude_rad) *
-        np.cos(altitude_rad) +
-        np.sin(slope) *
-        np.cos((azimuth_rad - np.pi/2.0) - aspect)  
+        np.sin(altitude_rad) *                            #cos
+        np.cos(altitude_rad) +                            #cos
+        np.sin(slope) *                                   #cos
+        np.cos((azimuth_rad - np.pi/2.0) - aspect)        #cos
     )
     return shaded
 
 # heart of code oh yeah!!!
 def multidirectional_hillshade(dtm):
   #  #azimuth_color [r = red, g = green, b = blue] = [sun direction, R, G, B]
-    azimuth_r = [315, 247, 10, 10]
-    azimuth_g = [10, 22, 230, 50]
-    azimuth_b = [45, 19, 90, 230]
+    azimuth_r = [315, 247, 10, 10]    #315
+    azimuth_g = [10, 22, 230, 50]     #0    	
+    azimuth_b = [45, 19, 90, 230]     #45
 
     r = np.mean([hillshade(dtm, azimuth=az) for az in azimuth_r], axis=0)
     g = np.mean([hillshade(dtm, azimuth=az) for az in azimuth_g], axis=0)
